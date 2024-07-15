@@ -77,6 +77,9 @@
     <ClInclude Include="xatrix\m_xatrix_gekk.h">
       <Filter>xatrix</Filter>
     </ClInclude>
+    <ClInclude Include="jsoncpp\src\lib_json\json_tool.h">
+      <Filter>json</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cg_main.cpp" />
@@ -247,6 +250,15 @@
     <ClCompile Include="xatrix\p_xatrix_weapon.cpp">
       <Filter>xatrix</Filter>
     </ClCompile>
+    <ClCompile Include="jsoncpp\src\lib_json\json_value.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="jsoncpp\src\lib_json\json_writer.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="jsoncpp\src\lib_json\json_reader.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="bots">
@@ -261,5 +273,13 @@
     <Filter Include="xatrix">
       <UniqueIdentifier>{6565427e-a805-4dc7-ba57-3ce0b62e4336}</UniqueIdentifier>
     </Filter>
+    <Filter Include="json">
+      <UniqueIdentifier>{aee2a3fe-01ba-4ae5-86a5-9a14497fcc9d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jsoncpp\src\lib_json\json_valueiterator.inl">
+      <Filter>json</Filter>
+    </None>
   </ItemGroup>
 </Project>

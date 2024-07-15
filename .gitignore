@@ -1,0 +1,48 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.lnk
+
+# Visual Studio
+*.vs
+*.opendb
+*.sdf
+*.map
+*.opensdf
+*.pdb
+*.sbr
+*.suo
+*.tlog
+*.ipch
+*.hm
+*.exp
+*.res
+*.lastbuildstate
+*.idb
+*.user
+
+# Build directories
+rerelease/game/*
+rerelease/x64/*

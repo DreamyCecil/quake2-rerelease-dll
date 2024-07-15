@@ -46,10 +46,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>../</OutDir>
     <TargetName>$(ProjectName)_x64</TargetName>
+    <IncludePath>$(SolutionDir)jsoncpp\include\;$(SolutionDir)fmt\include\;$(IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>../</OutDir>
     <TargetName>$(ProjectName)_x64</TargetName>
+    <IncludePath>$(SolutionDir)jsoncpp\include\;$(SolutionDir)fmt\include\;$(IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <VcpkgUseStatic>true</VcpkgUseStatic>
@@ -64,7 +66,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>KEX_Q2_GAME;KEX_Q2GAME_EXPORTS;NO_FMT_SOURCE;KEX_Q2GAME_DYNAMIC;_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>KEX_Q2_GAME;KEX_Q2GAME_EXPORTS;KEX_Q2GAME_DYNAMIC;_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <DisableSpecificWarnings>4267;4244</DisableSpecificWarnings>
@@ -82,7 +84,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>KEX_Q2_GAME;KEX_Q2GAME_EXPORTS;NO_FMT_SOURCE;KEX_Q2GAME_DYNAMIC;_CRT_SECURE_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>KEX_Q2_GAME;KEX_Q2GAME_EXPORTS;KEX_Q2GAME_DYNAMIC;_CRT_SECURE_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <DisableSpecificWarnings>4267;4244</DisableSpecificWarnings>
@@ -109,6 +111,7 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="g_local.h" />
     <ClInclude Include="g_statusbar.h" />
+    <ClInclude Include="jsoncpp\src\lib_json\json_tool.h" />
     <ClInclude Include="m_actor.h" />
     <ClInclude Include="m_arachnid.h" />
     <ClInclude Include="m_berserk.h" />
@@ -173,6 +176,9 @@
     <ClCompile Include="g_turret.cpp" />
     <ClCompile Include="g_utils.cpp" />
     <ClCompile Include="g_weapon.cpp" />
+    <ClCompile Include="jsoncpp\src\lib_json\json_reader.cpp" />
+    <ClCompile Include="jsoncpp\src\lib_json\json_value.cpp" />
+    <ClCompile Include="jsoncpp\src\lib_json\json_writer.cpp" />
     <ClCompile Include="m_actor.cpp" />
     <ClCompile Include="m_arachnid.cpp" />
     <ClCompile Include="m_berserk.cpp" />
@@ -239,6 +245,9 @@
     <ClCompile Include="xatrix\m_xatrix_fixbot.cpp" />
     <ClCompile Include="xatrix\m_xatrix_gekk.cpp" />
     <ClCompile Include="xatrix\p_xatrix_weapon.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jsoncpp\src\lib_json\json_valueiterator.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
