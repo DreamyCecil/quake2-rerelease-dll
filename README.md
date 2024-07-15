@@ -1,5 +1,12 @@
 # Quake II Rerelease Game Source
 
+This is a personal mod for Quake 2 Remastered with random changes and features.
+
+### Some features in this fork have been borrowed from:
+- Quake 2 Unmaster Mod - https://github.com/nickgovier/Q2unmaster
+
+# Original README
+
 This repository contains the game code for the 2023 rerelease of Quake II, for users who wish to mod the game, along with the original game code that was use for reference. Mods can be loaded into the rerelease the same way as the original game: launch the game with `+set game mymod` or type `game mymod` into the console while the game is running. We recommend installing mods into your `%USERPROFILE%\Saved Games\Nightdive Studios\Quake II` directory to ensure the original game files do not get modified.
 
 id Software is unable to provide support for this release, however we urge you to take advantage of the depth of community-driven resources already available.
