@@ -1420,7 +1420,14 @@ void Weapon_HyperBlaster_Fire(edict_t *ent)
 				damage = 15;
 			else
 				damage = 20;
-			Blaster_Fire(ent, offset, damage, true, (ent->client->ps.gunframe % 4) ? EF_NONE : EF_HYPERBLASTER);
+
+			// [Cecil]
+			if (un_hyperblaster_trails->integer == 1) {
+				Blaster_Fire(ent, offset, damage, true, EF_BLASTER);
+			} else {
+				Blaster_Fire(ent, offset, damage, true, (ent->client->ps.gunframe % 4) ? EF_NONE : EF_HYPERBLASTER);
+			}
+
 			Weapon_PowerupSound(ent);
 
 			G_RemoveAmmo(ent);
@@ -1789,6 +1796,11 @@ void weapon_railgun_fire(edict_t *ent)
 	{
 		damage = 100;
 		kick = 200;
+	}
+	// [Cecil]
+	else if (un_railgun_nerf->integer == 0) {
+		damage = 150;
+		kick = 250;
 	}
 	else
 	{

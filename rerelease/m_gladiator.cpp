@@ -365,10 +365,11 @@ DIE(gladiator_die) (edict_t *self, edict_t *inflictor, edict_t *attacker, int da
 		return;
 
 	// regular death
-	gi.sound(self, CHAN_BODY, sound_die, 1, ATTN_NORM, 0);
+	gi.sound(self, CHAN_BODY, sound_die2, 1, ATTN_NORM, 0); // [Cecil] sound_die -> sound_die2
 
-	if (brandom())
-		gi.sound(self, CHAN_VOICE, sound_die2, 1, ATTN_NORM, 0);
+	// [Cecil] Not needed
+	//if (brandom())
+		//gi.sound(self, CHAN_VOICE, sound_die2, 1, ATTN_NORM, 0);
 
 	self->deadflag = true;
 	self->takedamage = true;

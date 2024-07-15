@@ -27,6 +27,10 @@ cached_soundindex		snd_fry;
 
 edict_t *g_edicts;
 
+// [Cecil]
+cvar_t* un_railgun_nerf;
+cvar_t* un_hyperblaster_trails;
+
 cvar_t *deathmatch;
 cvar_t *coop;
 cvar_t *skill;
@@ -172,6 +176,10 @@ void PreInitGame()
 	deathmatch = gi.cvar("deathmatch", "0", CVAR_LATCH);
 	coop = gi.cvar("coop", "0", CVAR_LATCH);
 	teamplay = gi.cvar("teamplay", "0", CVAR_LATCH);
+
+	// [Cecil]
+	un_railgun_nerf = gi.cvar("un_railgun_nerf", "0", CVAR_LATCH);
+	un_hyperblaster_trails = gi.cvar("un_hyperblaster_trails", "0", CVAR_LATCH);
 
 	// ZOID
 	CTFInit();

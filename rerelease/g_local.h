@@ -1878,6 +1878,10 @@ template<typename T>
 	return irandom(2) == 0;
 }
 
+// [Cecil]
+extern cvar_t* un_railgun_nerf;
+extern cvar_t* un_hyperblaster_trails;
+
 extern cvar_t *deathmatch;
 extern cvar_t *coop;
 extern cvar_t *skill;
