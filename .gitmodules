@@ -1,0 +1,6 @@
+[submodule "rerelease/jsoncpp"]
+	path = rerelease/jsoncpp
+	url = https://github.com/open-source-parsers/jsoncpp.git
+[submodule "rerelease/fmt"]
+	path = rerelease/fmt
+	url = https://github.com/fmtlib/fmt.git
