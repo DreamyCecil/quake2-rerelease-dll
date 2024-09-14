@@ -1646,7 +1646,7 @@ model="models/items/armor/body/tris.md2"
 		/* use */ nullptr,
 		/* drop */ nullptr,
 		/* weaponthink */ nullptr,
-		/* pickup_sound */ "misc/ar3_pkup.wav",
+		/* pickup_sound */ "misc/ar1_pkup.wav",
 		/* world_model */ "models/items/armor/body/tris.md2",
 		/* world_model_flags */ EF_ROTATE | EF_BOB,
 		/* view_model */ nullptr,
